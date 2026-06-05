@@ -15,6 +15,7 @@ and host performance analysis.
 | Version Control | GitHub |
 
 ---
+## Pipeline Architecture
 
 ```plaintext
 Raw Airbnb Data (Snowflake source tables)
@@ -53,6 +54,29 @@ Raw Airbnb Data (Snowflake source tables)
 - **Refs** — dependency management across staging and mart layers
 
 ---
+## How to Run
+
+### Prerequisites
+- Snowflake account with warehouse, database, and schema configured
+- dbt Core installed (`pip install dbt-snowflake`)
+- `profiles.yml` configured with your Snowflake credentials
+
+### Steps
+
+```bash
+# Clone the repo
+git clone https://github.com/ArundhatiU/airbnb-analytics-pipeline.git
+cd airbnb-analytics-pipeline
+
+# Install dbt dependencies
+dbt deps
+
+# Run all models
+dbt run
+
+# Run tests
+dbt test
+```
 
 ## Learnings
 
