@@ -16,20 +16,18 @@ and host performance analysis.
 
 ---
 
-## Project Architecture
+```plaintext
 Raw Airbnb Data (Snowflake source tables)
-│
-▼
-Staging Models        ← Light cleaning, renaming, type casting
-│
-▼
-Intermediate Models   ← Business logic, joins
-│
-▼
-Mart Models           ← Final analytics-ready tables
-
-> DAG screenshot will be added after dbt docs are generated.
-
+        │
+        ▼
+  Staging Models        ← Light cleaning, renaming, type casting
+        │
+        ▼
+  Intermediate Models   ← Business logic, joins
+        │
+        ▼
+  Mart Models           ← Final analytics-ready tables
+```
 ---
 
 ## Data Models
